@@ -19,7 +19,6 @@ const Footer = () => {
     setIsError(false);
 
     if (!email || !email.includes("@")) {
-      // Basic email validation
       setMessage("Please enter a valid email address.");
       setIsError(true);
       setIsLoading(false);
@@ -40,7 +39,7 @@ const Footer = () => {
       if (response.ok) {
         setMessage(result.message || "Successfully subscribed!");
         setIsError(false);
-        setEmail(""); // Clear email field on success
+        setEmail("");
       } else {
         setMessage(result.message || "Subscription failed. Please try again.");
         setIsError(true);
@@ -103,9 +102,9 @@ const Footer = () => {
       {/* Original Footer Content */}
       <div className="pt-10 border-t border-neutral-700 flex flex-col items-center justify-center text-center">
         <p className="font-light text-neutral-400 text-sm lg:text-base max-w-2xl leading-relaxed">
-          <span className="inline-block">
+          {/* <span className="inline-block">
             Copyright © 2025 Jazzil Crizhna Sarinas. All Rights Reserved.
-          </span>
+          </span> */}
           <br />
           <span className="inline-block text-neutral-500 text-xs lg:text-sm mt-2">
             All material on this site may not be reproduced, distributed, cached
@@ -115,14 +114,14 @@ const Footer = () => {
         <p className="text-neutral-400 text-sm lg:text-base mt-4">
           A Photo of yours have been infringed?
         </p>
-        <p className="text-neutral-400 text-sm lg:text-base">
+        {/* <p className="text-neutral-400 text-sm lg:text-base">
           Contact Us:{" "}
           <Link href="mailto:jazzilcrizhnasarinas04@gmail.com">
             <span className="text-cyan-500 hover:text-cyan-400 underline transition-colors">
               jazzilcrizhnasarinas04@gmail.com
             </span>
           </Link>
-        </p>
+        </p> */}
       </div>
     </footer>
   );
