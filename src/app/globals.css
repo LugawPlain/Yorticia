@@ -1,9 +1,8 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 @custom-variant dark (&:is(.dark *));
 
-@plugin "tailwindcss-motion";
-@plugin "tailwindcss-animate";
-@plugin "tailwind-scrollbar";
+
 
 @theme inline {
   --color-background: var(--background);
